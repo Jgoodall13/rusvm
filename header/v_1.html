@@ -1,14 +1,30 @@
 <style>
-	.header-icons{
+	.header-icons {
 		text-align: right;
 	}
-	</style>
+
+	div#ross-header {
+		height: 100px;
+		background-color: #374756;
+		position: fixed;
+		width: 100%;
+		z-index: 9;
+	}
+
+	/*Global Sticky*/
+
+	#pageBodyWrapper {
+		padding-top: 212px;
+	}
+</style>
 
 <div id="ross-header">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
-				<a href="/"><img src="" alt="main logo"></a>
+				<a href="/">
+					<img src="" alt="main logo">
+				</a>
 			</div>
 			<div class="col-xs-6 header-icons">
 				<i class="fa fa-user"></i>
