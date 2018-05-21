@@ -2,6 +2,9 @@
     #footer_wrapper{
         display: none;
     }
+    #ross-vet-footer{
+        background-color: #374756;
+    }
     .footer-row-center{
         text-align: center;
     }
@@ -14,17 +17,24 @@
     }
     #socials{
         text-align: center;
+        background-color: #1e1e1e;
     }
 
     .fa-twitter:before, .fa-facebook:before, .fa-pinterest:before, .fa-youtube:before, .fa-instagram:before{
         font-size: 3em;
     }
+
+    #help-button{
+        background-color: red;
+        color: white;
+    }
     
 </style>
 
-<div class="container" id="ross-vet-footer">
+<div class="container-fluid" id="ross-vet-footer">
     <div class="row">
-        <div class="col-md-4 footer-row-left">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 footer-row-left">
             <img src="" alt="logo">
         </div>
         <div class="col-md-4 footer-row-center">
@@ -36,13 +46,14 @@
                 <li><a href="/">ALUMNI</a></li>
             </ul>
         </div>
-        <div class="col-md-4 footer-row-right">
-            <a href="/">NEED HELP?</a>
+        <div class="col-md-3 footer-row-right">
+            <a href="/" id="help-button">NEED HELP?</a>
             <h4>SUPPORT</h4>
             <p>(800)-000-000</p>
             <p>9AM-5PM CT</p>
             <a href="mailto:">ROSSU@OVERTUREPROMO.COM</a>
         </div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 <div id='socials'>
@@ -52,3 +63,15 @@
     <a href=""><i class="fa fa-youtube"></i></a>
     <a href=""><i class="fa fa-instagram"></i></a>
 </div>
+
+
+<script>
+
+    //This is something werid about the header working find on home but nowhere else..
+    $(document).ready(function(){
+        path = window.location.pathname
+        if (path !== '/') {
+            $('#pageBodyWrapper').css('padding-top', '140px')
+        }
+    })
+</script>
