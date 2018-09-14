@@ -1,0 +1,61 @@
+<style>
+    #ross-top-nav{
+        top: 100px;
+        box-shadow: 0px 3px 22px -3px rgba(0,0,0,0.75);
+        position: fixed;
+    }
+    div#nav-right {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+    #search-button {
+        margin-left: -4px;
+        background: #c23a48;
+        border: none;
+        padding: 2.5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: white;
+    }
+
+    .navbar.navbar-inverse-dark .navbar-toggle{
+        display: none;
+    }
+   
+</style>
+
+
+<nav id="ross-top-nav" class="navbar navbar-static-top navbar-inverse-dark mb0 navbar-fixed-top" role="navigation">
+    <div id="top-large-container" class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site_navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs-block" href="#" data-toggle="collapse" data-target="#site_navbar"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="collapse navbar-collapse" id="site_navbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown-full no-border-radius">
+                    <a href="/category/20168/made-on-demand.html" class="dropdown-toggle">
+                        MADE ON DEMAND
+                    </a>
+                </li>
+                <li class="dropdown-full no-border-radius">
+                    <a href="/category/20169/ross-vet-swag.html" class="dropdown-toggle">
+                        ROSS VET SWAG
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="nav-right">
+            <form action="/lsearch.jhtm" method="POST">
+                <input type="text" name="keywords" placeholder="Search...">
+                <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>

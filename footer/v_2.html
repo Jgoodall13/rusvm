@@ -1,0 +1,87 @@
+<style>
+    #footer_wrapper {
+        display: none;
+    }
+
+    #ross-vet-footer {
+        background-color: #374756;
+    }
+
+    .footer-row-center {
+        text-align: center;
+    }
+
+    .footer-row-right {
+        text-align: right;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .fa-twitter:before,
+    .fa-facebook:before,
+    .fa-pinterest:before,
+    .fa-youtube:before,
+    .fa-instagram:before {
+        font-size: 3em;
+    }
+    #sub-footer{
+        text-align: center;
+        background-color: #1e1e1e;
+    }
+
+</style>
+
+<div id="ross-vet-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/">
+                    <img src="" alt="logo">
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <h4>SUPPORT</h4>
+                <p>(800)-000-0000 | 9AM-5PM CST</p>
+                <a href="mailto:rossu@overturepromo.com">ROSSU@OVERTUREPROMO.COM</a>
+                <div id='socials'>
+                    <a href="">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <p>Copyright 2018 Overture, LLC. All rights reserved. Use of this site is ubject to the Overture Terms of Use and Privacy Policy.</p>
+                <p>This site is operated by Overture LLC. All logos, trademarks and brands are property of their respective owners.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="sub-footer">
+    MADE WITH LOVE
+</div>
+
+
+<script>
+    //This is something werid about the header working find on home but nowhere else..
+    $(document).ready(function () {
+        path = window.location.pathname
+        if (path !== '/') {
+            $('#pageBodyWrapper').css('padding-top', '140px')
+        }
+    })
+</script>
