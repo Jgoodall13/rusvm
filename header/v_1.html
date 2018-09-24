@@ -1,14 +1,42 @@
 <style>
+	.header-logo{
+		margin-top: 20px;
+		height: 80px;
+	}
+
 	.header-icons {
 		text-align: right;
+		margin-top: 35px;
 	}
 
 	div#ross-header {
-		height: 100px;
+		height: 120px;
 		background-color: #374756;
 		position: fixed;
 		width: 100%;
 		z-index: 45;
+	}
+
+	.head-icon {
+		height: 50px;
+	}
+
+	.head-icon:hover{
+		background: #c23a48;
+		border-radius: 50px;
+	}
+
+	.sign-span {
+		color: white;
+		margin-right: 50px;
+		margin-left: 10px;
+		font-size: 20px;
+	}
+
+	.cart-span{
+		color: white;
+		margin-left: 10px;
+		font-size: 20px;
 	}
 
 	/*Global Sticky*/
@@ -18,62 +46,83 @@
 	} */
 
 	/* CATEGORY AND PRODUCT PAGES */
-	.product_quick_links{
+
+	.product_quick_links {
 		display: none
 	}
-	.product_wrapper{
+
+	.product_wrapper {
 		text-align: center;
 	}
-	#products_wrapper_24 .product_wrapper{
+
+	#products_wrapper_24 .product_wrapper {
 		border: 1px solid #374756;
 	}
-	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_title{
+
+	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_title {
 		display: none;
 	}
-	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_value{
+
+	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_value {
 		color: #c23a48;
 	}
+
 	.col-breadcrumb.breadcrumb li a {
 		color: red;
-	} 
+	}
+
 	h1.category_head_name {
 		display: none;
 	}
-	.breadcrumb{
+
+	.breadcrumb {
 		background: none;
+		margin-bottom: 0;
+		margin-top: 10px;
 	}
-	.configBox_icon{
+
+	.configBox_icon {
 		display: none;
 	}
-	#product_details_15 .details_desc .configBox_wrapper .configBox_title.has-icon h3{
+
+	#product_details_15 .details_desc .configBox_wrapper .configBox_title.has-icon h3 {
 		background: none;
 		margin: 0;
 		padding: 0;
 	}
-	#product_details_15 .details_desc .total_price_wrapper{
+
+	#product_details_15 .details_desc .total_price_wrapper {
 		background: none;
 	}
-	#product_details_15 .details_desc .addToList_btn_wrapper .addToList_btn, #product_details_15 .details_desc .addToQuote_btn_wrapper .addToQuote_btn{
+
+	#product_details_15 .details_desc .addToList_btn_wrapper .addToList_btn,
+	#product_details_15 .details_desc .addToQuote_btn_wrapper .addToQuote_btn {
 		display: none;
 	}
-	.accordion_box:nth-child(2), .accordion_box:nth-child(3){
+
+	.accordion_box:nth-child(2),
+	.accordion_box:nth-child(3) {
 		display: none
 	}
-	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading{
+
+	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading {
 		background-image: none;
 		background-color: #1e1e1e;
 		color: white;
 	}
-	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading .accordion_title a{
+
+	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading .accordion_title a {
 		color: white;
 	}
-	.addToCart_btn{
+
+	.addToCart_btn {
 		background-image: none;
 		background-color: #c23a48;
 		color: white;
-		border: 1px solid #c23a48
+		border: 1px solid #c23a48;
 	}
-	.addToCart_btn:hover{
+
+	.addToCart_btn:hover {
 		border: 1px solid #c23a48;
 		color: #c23a48;
 		background-color: white;
@@ -85,23 +134,29 @@
 		<div class="row">
 			<div class="col-xs-6">
 				<a href="/">
-					<img src="" alt="main logo">
+					<img class="header-logo" src="/assets/img/rusvm/header_Logo.svg" alt="main logo">
 				</a>
 			</div>
 			<div class="col-xs-6 header-icons">
-				<i class="fa fa-user"></i>
-				<i class="fa fa-shopping-cart"></i>
+				<a href="/account.jhtm">
+					<img class="head-icon" src="/assets/img/rusvm/header_Account.svg" alt="">
+					<span class="sign-span">SIGN IN</span>
+				</a>
+				<a href="/viewCart.jhtm">
+					<img class="head-icon" src="/assets/img/rusvm/header_Cart.svg" alt="">
+					<span class="cart-span">MY CART</span>
+				</a>
 			</div>
 		</div>
 	</div>
 </div>
 
 <script>
-	$(document).ready(function(){
-		$( "ul.breadcrumb" ).find( "a" ).css({
+	$(document).ready(function () {
+		$("ul.breadcrumb").find("a").css({
 			"color": "#c23a48",
 			"font-size": "24px",
-			"font-weight": "900" 
+			"font-weight": "900"
 		});
 	})
 </script>

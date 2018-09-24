@@ -19,60 +19,86 @@
         list-style-type: none;
         padding: 0;
     }
-    
-    .fa-twitter:before,
-    .fa-facebook:before,
-    .fa-pinterest:before,
-    .fa-youtube:before,
-    .fa-instagram:before {
-        font-size: 3em;
-    }
-    #sub-footer{
-        text-align: center;
-        background-color: #1e1e1e;
+
+    #socials{
+        margin-top: 10px;
     }
 
+    .footer-social {
+		height: 50px;
+	}
+
+	.footer-social:hover{
+		background: #c23a48;
+		border-radius: 50px;
+	}
+
+    #sub-footer {
+        text-align: center;
+        background-color: #1e1e1e;
+        height: 50px;
+    }
+
+    .white{
+        color: white
+    }
+
+    .footer-logo{
+        height: 175px;
+        margin-right: 25%;
+    }
+
+    .small-line{
+        line-height: .5;
+    }
+
+    .logo-love{
+        height: 25px;
+        margin-top: 13px
+    }
 </style>
 
 <div id="ross-vet-footer">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
+        <div class="row" style="padding-top: 30px">
+            <div class="col-sm-6" style="text-align: right">
                 <a href="/">
-                    <img src="" alt="logo">
+                    <img class="footer-logo" src="/assets/img/rusvm/footer_Logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="col-sm-6">
-                <h4>SUPPORT</h4>
-                <p>(800)-000-0000 | 9AM-5PM CST</p>
-                <a href="mailto:rossu@overturepromo.com">ROSSU@OVERTUREPROMO.COM</a>
+            <div class="col-sm-4" style="text-align: center">
+                <h4 class="white">SUPPORT</h4>
+                <p class="white">(800)-000-0000 | 9AM-5PM CST</p>
+                <a class="white" href="mailto:rossu@overturepromo.com">ROSSU@OVERTUREPROMO.COM</a>
                 <div id='socials'>
                     <a href="">
-                        <i class="fa fa-twitter"></i>
+                        <img class="footer-social" src="/assets/img/rusvm/twitter.svg" alt="">
                     </a>
                     <a href="">
-                        <i class="fa fa-facebook"></i>
+                        <img class="footer-social" src="/assets/img/rusvm/facebook.svg" alt="">
                     </a>
                     <a href="">
-                        <i class="fa fa-pinterest"></i>
+                        <img class="footer-social" src="/assets/img/rusvm/pintrest.svg" alt="">
                     </a>
                     <a href="">
-                        <i class="fa fa-youtube"></i>
+                        <img class="footer-social" src="/assets/img/rusvm/youtube.svg" alt="">
                     </a>
                     <a href="">
-                        <i class="fa fa-instagram"></i>
+                        <img class="footer-social" src="/assets/img/rusvm/instagram.svg" alt="">
                     </a>
                 </div>
             </div>
-            <div class="col-xs-12">
-                <p>Copyright 2018 Overture, LLC. All rights reserved. Use of this site is ubject to the Overture Terms of Use and Privacy Policy.</p>
-                <p>This site is operated by Overture LLC. All logos, trademarks and brands are property of their respective owners.</p>
+            <div class="col-xs-12" style="text-align: center; padding: 20px 0 10px;">
+                <p class="white small-line">Copyright 2018 Overture, LLC. All rights reserved. Use of this site is ubject to the Overture Terms of Use
+                    and Privacy Policy.</p>
+                <p class="white small-line">This site is operated by Overture LLC. All logos, trademarks and brands are property of their respective
+                    owners.</p>
             </div>
         </div>
     </div>
 </div>
 <div id="sub-footer">
-    MADE WITH LOVE
+    <img class="logo-love" src="/assets/img/rusvm/madeWithLove.svg" alt="">
 </div>
 
 
@@ -81,7 +107,7 @@
     $(document).ready(function () {
         path = window.location.pathname
         if (path !== '/') {
-            $('#pageBodyWrapper').css('padding-top', '140px')
+            $('#pageBodyWrapper').css('padding-top', '160px')
         }
     })
 </script>
