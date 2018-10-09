@@ -1,4 +1,22 @@
 <style>
+
+	@font-face {
+		font-family: Brandon-bold;
+		src: url("/assets/fonts/Brandon_bold.otf");
+	}
+	@font-face {
+		font-family: Brandon-reg;
+		src: url("/assets/fonts/Brandon_reg.otf");
+	}
+	@font-face {
+		font-family: Brandon-light;
+		src: url("/assets/fonts/Brandon_light.otf");
+	}
+
+	*{
+		font-family: Brandon-reg;
+	}
+
 	.header-logo{
 		margin-top: 20px;
 		height: 80px;
@@ -100,6 +118,8 @@
 		display: none;
 	}
 
+
+	/* TURN BACK ON AFTER WE FIGURFE OUT PROP 65 */
 	.accordion_box:nth-child(2),
 	.accordion_box:nth-child(3) {
 		display: none
@@ -115,29 +135,40 @@
 		color: white;
 	}
 
-	.addToCart_btn {
+	.addToCart_btn, .continueShopping_btn, .proceedCheckout_btn, .purchase_btn {
 		background-image: none;
 		background-color: #c23a48;
 		color: white;
 		border: 1px solid #c23a48;
 	}
 
-	.addToCart_btn:hover {
+	.addToCart_btn:hover, .continueShopping_btn:hover, .proceedCheckout_btn:hover, .purchase_btn:hover {
 		border: 1px solid #c23a48;
 		color: #c23a48;
 		background-color: white;
+	}
+
+	@media(max-width: 997px){
+		.header-logo{
+            height: 70px;
+        }
+	}
+	@media(max-width: 767px){
+		.header-icons{
+			display: none;
+		}
 	}
 </style>
 
 <div id="ross-header">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-6">
+			<div class="col-sm-6">
 				<a href="/">
 					<img class="header-logo" src="/assets/img/rusvm/header_Logo.svg" alt="main logo">
 				</a>
 			</div>
-			<div class="col-xs-6 header-icons">
+			<div class="col-sm-6 header-icons">
 				<a href="/account.jhtm">
 					<img class="head-icon" src="/assets/img/rusvm/header_Account.svg" alt="">
 					<span class="sign-span">SIGN IN</span>

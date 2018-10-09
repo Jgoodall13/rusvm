@@ -22,6 +22,19 @@
     .navbar.navbar-inverse-dark .navbar-toggle{
         display: none;
     }
+
+    #hidden-sign{
+        display: none;
+    }
+
+    @media(max-width: 767px){
+        #hidden-sign{
+            display: block;
+        }
+        #pipe{
+            display: none;
+        }
+    }
    
 </style>
 
@@ -43,11 +56,21 @@
                     <a href="/category/20168/made-on-demand.html" class="dropdown-toggle">
                         MADE ON DEMAND
                     </a>
-                    <span style="color: #b7b7b7"> | </span>
+                    <span id="pipe" style="color: #b7b7b7"> | </span>
                 </li>
                 <li class="dropdown-full no-border-radius">
                     <a href="/category/20169/ross-vet-swag.html" class="dropdown-toggle">
                         ROSS VET SWAG
+                    </a>
+                </li>
+                <li class="dropdown-full no-border-radius" id="hidden-sign">
+                    <a href="/account.jhtm" class="dropdown-toggle">
+                        SIGN IN
+                    </a>
+                </li>
+                <li class="dropdown-full no-border-radius" id="hidden-sign">
+                    <a href="/viewCart.jhtm" class="dropdown-toggle">
+                        MY CART
                     </a>
                 </li>
             </ul>
@@ -55,6 +78,7 @@
         <div id="nav-right">
             <form action="/lsearch.jhtm" method="POST">
                 <input type="text" name="keywords" placeholder="Search...">
+                <input name="searchIndexedCatId" value="20152" type="hidden" />	
                 <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
