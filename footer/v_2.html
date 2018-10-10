@@ -26,6 +26,7 @@
 
     .footer-social {
 		height: 50px;
+        margin: 5px;
 	}
 
 	.footer-social:hover{
@@ -35,12 +36,16 @@
 
     #sub-footer {
         text-align: center;
-        background-color: #1e1e1e;
+        background-color: #2c2d34;
         height: 50px;
     }
 
     .white{
         color: white
+    }
+
+    .turn-blue:hover{
+        color: #b3d4fc
     }
 
     .footer-logo{
@@ -54,7 +59,7 @@
 
     .logo-love{
         height: 25px;
-        margin-top: 13px
+        margin-top: 13px;
     }
 
     @media(max-width: 767px){
@@ -75,7 +80,7 @@
             <div class="col-sm-4" style="text-align: center">
                 <h4 class="white">SUPPORT</h4>
                 <p class="white">(800)-000-0000 | 9AM-5PM CST</p>
-                <a class="white" href="mailto:rossu@overturepromo.com">ROSSU@OVERTUREPROMO.COM</a>
+                <a class="white turn-blue" href="mailto:rossu@overturepromo.com">ROSSU@OVERTUREPROMO.COM</a>
                 <div id='socials'>
                     <a href="https://twitter.com/rossvetschool" target="blank">
                         <img class="footer-social" src="/assets/img/rusvm/twitter.svg" alt="">
@@ -95,8 +100,7 @@
                 </div>
             </div>
             <div class="col-xs-12" style="text-align: center; padding: 20px 0 10px;">
-                <p class="white small-line">Copyright 2018 Overture, LLC. All rights reserved. Use of this site is subject to the Overture Terms of Use
-                    and Privacy Policy.</p>
+                <p class="white small-line">Copyright 2018 Overture, LLC. All rights reserved. Use of this site is subject to the <a href="" target="blank" class="turn-blue white">Terms of Use</a> and <a href="" target="blank" class="turn-blue white">Privacy Policy</a>.</p>
                 <p class="white small-line">This site is operated by Overture LLC. All logos, trademarks and brands are property of their respective
                     owners.</p>
             </div>
@@ -115,5 +119,8 @@
         if (path !== '/') {
             $('#pageBodyWrapper').css('padding-top', '160px')
         }
+        $( ".breadcrumb li:nth-child(2)" ).css('display', 'none');
+        $( ".breadcrumb li:nth-child(1)" ).css('text-transform', 'uppercase');
+        $( ".breadcrumb li:nth-child(3)" ).css('text-transform', 'uppercase');
     })
 </script>

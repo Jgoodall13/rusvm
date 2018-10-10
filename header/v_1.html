@@ -1,23 +1,29 @@
 <style>
-
 	@font-face {
 		font-family: Brandon-bold;
 		src: url("/assets/fonts/Brandon_bold.otf");
 	}
+
 	@font-face {
 		font-family: Brandon-reg;
 		src: url("/assets/fonts/Brandon_reg.otf");
 	}
+
 	@font-face {
 		font-family: Brandon-light;
 		src: url("/assets/fonts/Brandon_light.otf");
 	}
 
-	*{
+	@font-face {
+		font-family: Goth-two;
+		src: url("/assets/fonts/goth2.ttf");
+	}
+
+	* {
 		font-family: Brandon-reg;
 	}
 
-	.header-logo{
+	.header-logo {
 		margin-top: 20px;
 		height: 80px;
 	}
@@ -37,9 +43,10 @@
 
 	.head-icon {
 		height: 50px;
+		margin-top: -13px;
 	}
 
-	.head-icon:hover{
+	.head-icon:hover {
 		background: #c23a48;
 		border-radius: 50px;
 	}
@@ -48,13 +55,17 @@
 		color: white;
 		margin-right: 50px;
 		margin-left: 10px;
-		font-size: 20px;
+		font-size: 32px;
+		font-family: Goth-two;
+		font-weight: 400;
 	}
 
-	.cart-span{
+	.cart-span {
 		color: white;
 		margin-left: 10px;
-		font-size: 20px;
+		font-size: 32px;
+		font-family: Goth-two;
+		font-weight: 400;
 	}
 
 	/*Global Sticky*/
@@ -77,12 +88,30 @@
 		border: 1px solid #374756;
 	}
 
+	#products_wrapper_24 .product_wrapper .product_name_wrapper .product_name a {
+		color: #374756;
+		text-decoration: none;
+		font-family: Brandon-bold;
+		font-size: 17px;
+	}
+
+	#products_wrapper_24 .product_wrapper .product_sku_wrapper .product_sku {
+		font-weight: 600;
+		word-wrap: break-word;
+		color: #374756;
+		font-family: Brandon-light;
+		font-style: italic;
+		font-size: 16px;
+	}
+
 	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_title {
 		display: none;
 	}
 
 	#products_wrapper_24 .product_wrapper .product_price_wrapper .price_value {
 		color: #c23a48;
+		font-family: Brandon-bold;
+		font-size: 20px;
 	}
 
 	.col-breadcrumb.breadcrumb li a {
@@ -97,6 +126,21 @@
 		background: none;
 		margin-bottom: 0;
 		margin-top: 10px;
+	}
+
+	#product_details_15 .product_name_sku_wrapper .details_sku {
+		font-size: 16px;
+		/* margin-bottom: 10px; */
+		font-family: Brandon-light;
+		font-style: italic;
+	}
+
+	#product_details_15 .product_name_sku_wrapper .details_sku .sku_title {
+		font-weight: lighter;
+	}
+
+	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading .accordion_title a {
+		text-transform: uppercase;
 	}
 
 	.configBox_icon {
@@ -118,8 +162,15 @@
 		display: none;
 	}
 
+	#product_details_15 .details_desc .addToCart_btn_wrapper .addToCart_btn {
+		width: 100%;
+		font-family: Brandon-bold;
+		text-transform: uppercase;
+	}
+
 
 	/* TURN BACK ON AFTER WE FIGURFE OUT PROP 65 */
+
 	.accordion_box:nth-child(2),
 	.accordion_box:nth-child(3) {
 		display: none
@@ -127,7 +178,7 @@
 
 	#product_details_15 .accordion_wrapper .accordion_box .accordion_heading {
 		background-image: none;
-		background-color: #1e1e1e;
+		background-color: #2c2d34;
 		color: white;
 	}
 
@@ -135,26 +186,59 @@
 		color: white;
 	}
 
-	.addToCart_btn, .continueShopping_btn, .proceedCheckout_btn, .purchase_btn {
+	#product_details_15 .details_desc .configBox_wrapper .configBox_title.has-icon h3, #product_details_15 .details_desc .priceGridWrapper table.priceGrid thead tr th, #product_details_15 .details_desc .priceGridWrapper table.priceGrid tbody tr th, #product_details_15 .details_desc .total_price_wrapper .total_price_title{
+		text-transform: uppercase;
+	}
+
+	.addToCart_btn,
+	.continueShopping_btn,
+	.proceedCheckout_btn,
+	.purchase_btn {
 		background-image: none;
 		background-color: #c23a48;
 		color: white;
 		border: 1px solid #c23a48;
 	}
 
-	.addToCart_btn:hover, .continueShopping_btn:hover, .proceedCheckout_btn:hover, .purchase_btn:hover {
+	/* .addToCart_btn:hover,
+	.continueShopping_btn:hover,
+	.proceedCheckout_btn:hover,
+	.purchase_btn:hover {
 		border: 1px solid #c23a48;
 		color: #c23a48;
-		background-color: white;
+		background-color: #ffffff;
+	} */
+
+		.addToCart_btn:hover,
+		.continueShopping_btn:hover,
+		.proceedCheckout_btn:hover,
+		.purchase_btn:hover {
+			border: 1px solid #ffffff;
+			color: #ffffff;
+			background-color: #b3d4fc;
+		}
+
+		.shoppingCartWizard .wizard .wizard-bar .wizard-step.active .stepNmbr{
+			background: #c23a48;
+		}
+
+		.shoppingCartWizard .wizard .wizard-bar .wizard-step .stepNmbr{
+			background: #374756
+		}
+
+		.shoppingCartWizard .progress .progress-bar{
+			background-image: none;
+			background: #2c2d34;
+		}
+
+	@media(max-width: 997px) {
+		.header-logo {
+			height: 70px;
+		}
 	}
 
-	@media(max-width: 997px){
-		.header-logo{
-            height: 70px;
-        }
-	}
-	@media(max-width: 767px){
-		.header-icons{
+	@media(max-width: 767px) {
+		.header-icons {
 			display: none;
 		}
 	}
@@ -187,7 +271,7 @@
 		$("ul.breadcrumb").find("a").css({
 			"color": "#c23a48",
 			"font-size": "24px",
-			"font-weight": "900"
+			"font-family": "Brandon-bold"
 		});
 	})
 </script>
